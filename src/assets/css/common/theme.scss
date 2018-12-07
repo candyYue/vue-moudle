@@ -1,0 +1,74 @@
+// https://github.com/ElemeFE/element/blob/dev/packages/theme-chalk/src/common/var.scss
+@import '../core/vars.scss';
+/* 改变 icon 字体路径变量，必需 */
+
+
+
+/* 改变主题色变量 */
+
+
+$--color-success: $success;
+$--color-warning: $warning;
+$--color-danger: $text-error;
+$--loading-spinner-size: 18px;
+$--border-color-base: $border-input;
+$--scrollbar-background-color: rgba(#c1c1c1, .3);
+$--scrollbar-hover-background-color: rgba(#c1c1c1, .5);
+$--input-placeholder-color: #b4bccd;
+$--input-height: 36px;
+
+$--color-primary: $theme-color;
+$--color-text-primary: $primary-text-color !default;
+$--color-text-regular: $subsidiary-text-color !default;
+$--color-text-secondary: $info-text-color !default;
+// $--color-text-placeholder: $placeholder-text-colr !default;
+
+/* Table
+-------------------------- */
+$--table-header-background : $table-striped !default;
+$--table-border: none !default;
+$--table-text-color: $subsidiary-text-color !default;
+$--table-header-color: $--color-text-primary !default;
+$--table-row-hover-background: $table-striped !default;
+
+/* Pagination
+-------------------------- */
+$--pagination-font-size: 12px !default;
+$--pagination-color: $pagination-color !default;
+$--pagination-button-color: $pagination-color !default;
+$--pagination-button-width: 30px !default;
+
+/* Checkbox
+-------------------------- */
+$--checkbox-color: $subsidiary-text-color !default;
+$--checkbox-checked-text-color: $subsidiary-text-color !default;
+
+
+// button
+$--button-small-font-size: 14px !default;
+$--button-small-padding-vertical: 7px !default;
+$--button-small-padding-horizontal: 11px !default;
+$--button-padding-vertical: 10px !default; 
+$--button-padding-horizontal: 11px !default;
+// $--button-medium-padding-vertical: 10px !default;
+// $--button-medium-padding-horizontal: 11px !default;
+$--button-info-border: #D7DBE6 !default;
+$--button-info-color:  #444444 !default;
+$--button-info-fill: #FAFAFA !default;
+
+//input
+$--input-height: 36px !default;
+
+/* Break-point
+--------------------------*/
+$--md: $--md !default;
+$--lg: $--lg !default;
+
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index.scss";
+
+@media only screen and (max-width:($--md - 1)){
+  .hidden-md-and-down {
+      display: none!important;
+  }  
+}

@@ -1,0 +1,31 @@
+@import '../core/vars.scss';
+
+.el-tabs{
+    &__header{
+        margin: 0 0 20px;
+    }
+    &__active-bar{
+        height: 3px;
+        border-radius: 7px;
+    }
+
+    &__item{
+        height: 56px;
+        line-height: 56px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: normal;
+        padding: 0 18px;
+        &::before,
+        &::after{
+            content: '';
+            display: inline-block;
+            width: 16px;
+        }
+    }
+
+    &__nav-wrap::after{
+        height: 1px;
+        background-color: #e9ebee;
+    }
+}

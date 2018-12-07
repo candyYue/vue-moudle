@@ -1,0 +1,226 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$statistics-avg-duration-name: 'statistics-avg-duration';
+$statistics-avg-duration-x: 0px;
+$statistics-avg-duration-y: 96px;
+$statistics-avg-duration-offset-x: 0px;
+$statistics-avg-duration-offset-y: -96px;
+$statistics-avg-duration-width: 28px;
+$statistics-avg-duration-height: 28px;
+$statistics-avg-duration-total-width: 28px;
+$statistics-avg-duration-total-height: 124px;
+$statistics-avg-duration-image: '~@/assets/sprite/statistics.png';
+$statistics-avg-duration: (0px, 96px, 0px, -96px, 28px, 28px, 28px, 124px, '~@/assets/sprite/statistics.png', 'statistics-avg-duration', );
+$statistics-connected-rate-name: 'statistics-connected-rate';
+$statistics-connected-rate-x: 0px;
+$statistics-connected-rate-y: 0px;
+$statistics-connected-rate-offset-x: 0px;
+$statistics-connected-rate-offset-y: 0px;
+$statistics-connected-rate-width: 27px;
+$statistics-connected-rate-height: 27px;
+$statistics-connected-rate-total-width: 28px;
+$statistics-connected-rate-total-height: 124px;
+$statistics-connected-rate-image: '~@/assets/sprite/statistics.png';
+$statistics-connected-rate: (0px, 0px, 0px, 0px, 27px, 27px, 28px, 124px, '~@/assets/sprite/statistics.png', 'statistics-connected-rate', );
+$statistics-duration-name: 'statistics-duration';
+$statistics-duration-x: 0px;
+$statistics-duration-y: 32px;
+$statistics-duration-offset-x: 0px;
+$statistics-duration-offset-y: -32px;
+$statistics-duration-width: 27px;
+$statistics-duration-height: 27px;
+$statistics-duration-total-width: 28px;
+$statistics-duration-total-height: 124px;
+$statistics-duration-image: '~@/assets/sprite/statistics.png';
+$statistics-duration: (0px, 32px, 0px, -32px, 27px, 27px, 28px, 124px, '~@/assets/sprite/statistics.png', 'statistics-duration', );
+$statistics-total-connected-name: 'statistics-total-connected';
+$statistics-total-connected-x: 0px;
+$statistics-total-connected-y: 64px;
+$statistics-total-connected-offset-x: 0px;
+$statistics-total-connected-offset-y: -64px;
+$statistics-total-connected-width: 27px;
+$statistics-total-connected-height: 27px;
+$statistics-total-connected-total-width: 28px;
+$statistics-total-connected-total-height: 124px;
+$statistics-total-connected-image: '~@/assets/sprite/statistics.png';
+$statistics-total-connected: (0px, 64px, 0px, -64px, 27px, 27px, 28px, 124px, '~@/assets/sprite/statistics.png', 'statistics-total-connected', );
+$retina-statistics-avg-duration-name: 'retina_statistics-avg-duration';
+$retina-statistics-avg-duration-x: 0px;
+$retina-statistics-avg-duration-y: 192px;
+$retina-statistics-avg-duration-offset-x: 0px;
+$retina-statistics-avg-duration-offset-y: -192px;
+$retina-statistics-avg-duration-width: 56px;
+$retina-statistics-avg-duration-height: 56px;
+$retina-statistics-avg-duration-total-width: 56px;
+$retina-statistics-avg-duration-total-height: 248px;
+$retina-statistics-avg-duration-image: '~@/assets/sprite/statistics@2x.png';
+$retina-statistics-avg-duration: (0px, 192px, 0px, -192px, 56px, 56px, 56px, 248px, '~@/assets/sprite/statistics@2x.png', 'retina_statistics-avg-duration', );
+$retina-statistics-connected-rate-name: 'retina_statistics-connected-rate';
+$retina-statistics-connected-rate-x: 0px;
+$retina-statistics-connected-rate-y: 0px;
+$retina-statistics-connected-rate-offset-x: 0px;
+$retina-statistics-connected-rate-offset-y: 0px;
+$retina-statistics-connected-rate-width: 54px;
+$retina-statistics-connected-rate-height: 54px;
+$retina-statistics-connected-rate-total-width: 56px;
+$retina-statistics-connected-rate-total-height: 248px;
+$retina-statistics-connected-rate-image: '~@/assets/sprite/statistics@2x.png';
+$retina-statistics-connected-rate: (0px, 0px, 0px, 0px, 54px, 54px, 56px, 248px, '~@/assets/sprite/statistics@2x.png', 'retina_statistics-connected-rate', );
+$retina-statistics-duration-name: 'retina_statistics-duration';
+$retina-statistics-duration-x: 0px;
+$retina-statistics-duration-y: 64px;
+$retina-statistics-duration-offset-x: 0px;
+$retina-statistics-duration-offset-y: -64px;
+$retina-statistics-duration-width: 54px;
+$retina-statistics-duration-height: 54px;
+$retina-statistics-duration-total-width: 56px;
+$retina-statistics-duration-total-height: 248px;
+$retina-statistics-duration-image: '~@/assets/sprite/statistics@2x.png';
+$retina-statistics-duration: (0px, 64px, 0px, -64px, 54px, 54px, 56px, 248px, '~@/assets/sprite/statistics@2x.png', 'retina_statistics-duration', );
+$retina-statistics-total-connected-name: 'retina_statistics-total-connected';
+$retina-statistics-total-connected-x: 0px;
+$retina-statistics-total-connected-y: 128px;
+$retina-statistics-total-connected-offset-x: 0px;
+$retina-statistics-total-connected-offset-y: -128px;
+$retina-statistics-total-connected-width: 54px;
+$retina-statistics-total-connected-height: 54px;
+$retina-statistics-total-connected-total-width: 56px;
+$retina-statistics-total-connected-total-height: 248px;
+$retina-statistics-total-connected-image: '~@/assets/sprite/statistics@2x.png';
+$retina-statistics-total-connected: (0px, 128px, 0px, -128px, 54px, 54px, 56px, 248px, '~@/assets/sprite/statistics@2x.png', 'retina_statistics-total-connected', );
+$spritesheet-width: 28px;
+$spritesheet-height: 124px;
+$spritesheet-image: '~@/assets/sprite/statistics.png';
+$spritesheet-sprites: ($statistics-avg-duration, $statistics-connected-rate, $statistics-duration, $statistics-total-connected, );
+$spritesheet: (28px, 124px, '~@/assets/sprite/statistics.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 56px;
+$retina-spritesheet-height: 248px;
+$retina-spritesheet-image: '~@/assets/sprite/statistics@2x.png';
+$retina-spritesheet-sprites: ($retina-statistics-avg-duration, $retina-statistics-connected-rate, $retina-statistics-duration, $retina-statistics-total-connected, );
+$retina-spritesheet: (56px, 248px, '~@/assets/sprite/statistics@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$statistics-avg-duration-group-name: 'statistics-avg-duration';
+$statistics-avg-duration-group: ('statistics-avg-duration', $statistics-avg-duration, $retina-statistics-avg-duration, );
+$statistics-connected-rate-group-name: 'statistics-connected-rate';
+$statistics-connected-rate-group: ('statistics-connected-rate', $statistics-connected-rate, $retina-statistics-connected-rate, );
+$statistics-duration-group-name: 'statistics-duration';
+$statistics-duration-group: ('statistics-duration', $statistics-duration, $retina-statistics-duration, );
+$statistics-total-connected-group-name: 'statistics-total-connected';
+$statistics-total-connected-group: ('statistics-total-connected', $statistics-total-connected, $retina-statistics-total-connected, );
+$retina-groups: ($statistics-avg-duration-group, $statistics-connected-rate-group, $statistics-duration-group, $statistics-total-connected-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../css/core";
+.company{
+    .modal-content{
+        width: 360px;
+        .modal-body{
+            padding:24px
+        }
+        .modal-header{
+            padding: 13px 16px;
+        }
+        .modal-footer{
+            padding:12px 12px;
+            .el-button--medium{
+                padding: 8px 13px
+            }
+        }
+    }
+    .chooseCompany{
+        height: 208px;
+        overflow-y: auto;
+        background: #F6F6F6;
+        margin-bottom: 12px;
+        padding: 17px 14px;
+        .el-checkbox{
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .el-checkbox + .el-checkbox{
+            margin: 0px;
+            margin-top: 12px;
+        }
+    }
+    .newShare{
+        .cell{
+            padding-left: 20px
+        }
+        span{
+            margin-left: -16px;
+            i{
+                display: inline-block;
+                @include size(8px);
+                border-radius: 50%;
+                background: $success;
+                margin-right: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+// size 元素大小
+@mixin size($width,$height:$width) {
+    width: $width;
+    height: $height;
+}
+
+// round 圆大小
+@mixin round($size) {
+    @include size($size);
+    border-radius: 50%;
+}
+
+// center-block 块级元素居中
+@mixin center-block() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%center-block {
+  @include center-block();
+}
+
+@mixin fullscreen() {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin text-vertical-center($height) {
+  height: $height;
+  line-height: $height;
+}
+
+@mixin skin($color,$background-color){
+  color: $color;
+  background-color: $background-color;
+}
+
+// flex-center 弹性布局居中
+@mixin center-flex($direction: both) {
+  display: flex;
+  @if $direction==both {
+    justify-content: center;
+    align-items: center;
+  }
+  @else if $direction==x {
+    justify-content: center;
+  }
+  @else if $direction==y {
+    align-items: center;
+  }
+}
+
+// translate-center translate定位居中
+@mixin center-translate($direction: both) {
+  position: absolute;
+  @if $direction==both {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @else if $direction==x {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  @else if $direction==y {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+
+// clearfix 清除浮动
+@mixin clearfix() {
+    &::before,
+    &::after {
+      content: "";
+      display: table;
+    }
+    &::after {
+      clear: both;
+    }
+}
+%clearfix {
+  @include clearfix();
+}
+
+
+// ellipsis 超过长度显示省略号
+@mixin ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+%ellipsis {
+  @include ellipsis();
+}
+
+// ellipsis-lines 超过$lines行文字显示省略号
+@mixin ellipsis-lines($lines: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+// disabled
+
+
+
+// triangle 三角箭头
+%triangle-basic {
+  content: "";
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+@mixin triangle($direction: top, $borderWidth: 6px, $borderColor: $colorC) {
+  @extend %triangle-basic;
+  @if $direction==top {
+    border-bottom: $borderWidth solid $borderColor;
+    border-left: $borderWidth dashed transparent;
+    border-right: $borderWidth dashed transparent;
+  }
+  @else if $direction==right {
+    border-left: $borderWidth solid $borderColor;
+    border-top: $borderWidth dashed transparent;
+    border-bottom: $borderWidth dashed transparent;
+  }
+  @else if $direction==bottom {
+    border-top: $borderWidth solid $borderColor;
+    border-left: $borderWidth dashed transparent;
+    border-right: $borderWidth dashed transparent;
+  }
+  @else if $direction==left {
+    border-right: $borderWidth solid $borderColor;
+    border-top: $borderWidth dashed transparent;
+    border-bottom: $borderWidth dashed transparent;
+  }
+}
+
+
+// v-arrow 方向箭头
+@mixin v-arrow($direction: right, $borderWidth: 2px, $size: 10px) {
+  display: inline-block;
+  vertical-align: middle;
+  width: $size;
+  height: $size;
+  @if $direction==top {
+    border-top: $borderWidth solid currentColor;
+    border-right: $borderWidth solid currentColor;
+    transform: rotate(-45deg);
+  }
+  @else if $direction==right {
+    border-top: $borderWidth solid currentColor;
+    border-right: $borderWidth solid currentColor;
+    transform: rotate(45deg);
+  }
+  @else if $direction==bottom {
+    border-left: $borderWidth solid currentColor;
+    border-bottom: $borderWidth solid currentColor;
+    transform: rotate(-45deg);
+  }
+  @if $direction==left {
+    border-left: $borderWidth solid currentColor;
+    border-bottom: $borderWidth solid currentColor;
+    transform: rotate(45deg);
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+  &::-moz-placeholder {
+    @content
+  }
+  &:-ms-input-placeholder {
+    @content
+  }
+};

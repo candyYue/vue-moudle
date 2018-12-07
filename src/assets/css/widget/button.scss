@@ -1,0 +1,82 @@
+@import '../core.scss';
+
+.el-button{
+    &--default{
+        &.button__add{
+            &:hover{
+                color: #fff;
+                border-color: $theme;
+                background-color: $theme;
+            }
+            &:active {
+                color: #fff;
+                border-color: mix( #000000, $theme-color, 8%);
+                background-color: mix( #000000, $theme-color, 8%);
+            }
+        }
+        &.button__del {
+            &:hover {
+                color: #fff;
+                background: url(../../../assets/icons/button-del-hover.png) no-repeat center/contain;
+            }
+            &:active {
+                color: #fff;
+                background: url(../../../assets/icons/button-del-hover.png) no-repeat center/contain;
+            }
+        }
+    }
+}
+.el-button--info.is-disabled, .el-button--info.is-disabled:hover, .el-button--info.is-disabled:focus, .el-button--info.is-disabled:active{
+    color: $placeholder-text-color;
+}
+.el-button--info:hover, .el-button--info:focus{
+    background: $theme;
+    border: 1px solid $theme;
+    color: #fff
+}
+.el-button--info:active{
+    background: mix($primary-text-color, $theme, 8%);
+    border-color: mix($primary-text-color, $theme, 8%);
+}
+
+//task el-button
+.float-right{
+    .el-button--primary{
+        &:hover{
+            background-color:mix(#ffffff, $theme,  20%);
+        }
+        &:active{
+            background: mix(#000000, $theme, 8%);  
+            border-color:mix(#000000, $theme, 8%);
+        }
+        i{
+            font-size: 14px;
+            vertical-align: 0px;
+        }
+    }
+    .btn-error.el-button{
+        &:active{
+            background: mix($primary-text-color, $text-error, 8%);
+            border-color : mix($primary-text-color, $text-error, 8%);
+        }
+        i{
+            font-size: 15px;
+            vertical-align: -1px;
+        }
+    }
+    .el-button--info{
+        &:active{
+            background: mix($primary-text-color, $theme, 8%);
+            border-color: mix($primary-text-color, $theme, 8%);
+        }
+    }
+}
+.el-button{
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.el-button--primary.is-plain{
+    border-color: #CAE4FF;
+    background: #ECF5FF;
+}

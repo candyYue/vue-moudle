@@ -1,0 +1,171 @@
+@import '../core.scss';
+
+// table
+.el-table--group::after,
+.el-table--border::after,
+.el-table::before {
+    background-color: transparent;
+}
+.el-table td, .el-table th.is-leaf{
+  border-bottom: 1px solid #D8DCE5;
+}
+
+.el-table {
+  text-align: center;
+  &.loading{
+    min-height: 586px;
+  }
+  // min-height: 586px;
+  thead tr{
+    height: 40px;
+  }
+  th{
+    background: #FAFAFA;
+    padding: 7px 0;
+    text-align: left;
+    font-weight: normal;
+    border-bottom: 1px solid #EBEEF5!important;
+    &:first-of-type{
+      padding-left: 10px
+    }
+  }
+  td {
+      padding: 14px 0;
+      border-bottom: 1px solid #EBEEF5;
+      &:first-of-type{
+        padding-left: 10px
+      }
+      &:last-of-type{
+        padding: 0px
+      }
+  }
+  .visible-cell{
+    .cell{
+      overflow: visible;        
+    }
+  }
+  .cell{
+    line-height: 20px;
+  }
+}
+.question .el-table td:first-of-type{
+  padding-left: 0px;
+  .cell{
+    padding-left:5px
+  }
+}
+.el-table__empty-block {
+  width: 176px !important;
+  height: 133px !important;
+  background: url(../../images/no-data.png) no-repeat center/contain;
+  margin: 180px auto;
+  .el-table__empty-text{
+    // display: none;
+    color: #686D78;
+    font-size: 14px;
+    // top: 150px;
+    margin-top: 150px;
+  }
+}
+.table-icon-tool-tip{
+  $delay: 0.1s;
+  $transition: 0.35s;
+  display: inline-block;
+  position: fixed;
+  opacity: 0;
+  transition: opacity linear $transition $delay;
+  @include center-translate(x);
+  background: #FFF;
+  padding: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+  border-radius: 4px;
+  font-size: 12px;
+  color: $primary-text-color;
+  line-height: 1;
+  z-index: 100;
+  max-width: 90px;
+}
+.el-table{
+  
+  .multiple-actions{
+    .el-button+.el-button{
+      margin-left: 5px;
+    }
+  }
+  .el-button{
+    vertical-align: middle;
+    $delay: 0.1s;
+    padding: 0;
+    font-size: 0;
+    i{
+      position: relative;
+      padding: 5px;
+      &:hover::after {
+        opacity: 1;  
+        top: 100%;
+        z-index: 1;
+      }
+      &::before{
+        display: inline-block;
+        @include size(16px);
+        content: '';
+      }
+      &::after{
+        opacity: 0;
+        transition: opacity linear .35s $delay, top linear .15s $delay;
+        @include center-translate(x);
+        top: 80%;
+        background: #FFF;
+        padding: 5px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+        border-radius: 4px;
+        font-size: 12px;
+        color: $primary-text-color;
+        line-height: 1;
+      }
+    }
+
+    $table-action-icons: (edit: '编辑', delete:'删除', pause: '暂停', play: '开始', show: '任务详情', detail: '通话详情', download: '导出任务详情',share: '分享');
+    @each $icon,$text in $table-action-icons {
+      &[disabled]{
+        opacity: .5;
+        cursor: not-allowed;
+      }
+      .el-icon-#{$icon}{
+        &:before {
+            background: url(../../../assets/icons/action-#{$icon}.png) no-repeat center/contain;
+        }        
+      }
+      &:not(:disabled) .el-icon-#{$icon} {
+        &:hover{
+          &::before{
+            background:url(../../../assets/icons/action-#{$icon}-hover.png) no-repeat center/contain;
+          }
+          // &::after {
+          //   content: $text;
+          // }          
+        }
+
+      }
+    }
+  }
+}
+
+.tags-cell .cell{
+  @include ellipsis();
+  // min-width: 500px;
+  padding: 0 22% 0 22%;
+}
+
+.hide-expand .el-table__expand-column .el-icon {
+  visibility: hidden;
+}
+.el-table__expand-column .cell{
+  position: absolute;
+  left: -25px;
+  top: 47%;
+  transform: translateY(-50%)
+}
+.el-table__fixed::before, .el-table__fixed-right::before{
+  z-index: -1;
+}

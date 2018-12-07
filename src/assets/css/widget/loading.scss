@@ -1,0 +1,16 @@
+.el-loading-mask.is-fullscreen{
+  .el-loading-spinner{
+    top: 40vh;
+  }
+}
+.el-loading-mask{
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    // background-color: transparent;
+    .el-loading-spinner {
+      .circular{
+            height: 32px;
+            width: 32px;
+      }
+    }
+}

@@ -1,0 +1,20 @@
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>发送短信</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="1" y="1" width="18" height="18" rx="2"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2-Copy-6">
+            <g id="Rectangle-10-Copy-3">
+                <use fill="#C1A1FD" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#C1A1FD" stroke-width="1" x="1.5" y="1.5" width="17" height="17" rx="2"></rect>
+            </g>
+            <g id="Group-23" transform="translate(4.000000, 6.000000)">
+                <rect id="Rectangle-10" fill="#FFFFFF" x="0" y="0" width="12" height="8.80000019" rx="1"></rect>
+                <path d="M0,0 L5.33654571,4.46522904 L5.33654571,4.46522904 C5.70677586,4.77501041 6.24545644,4.77608475 6.61691929,4.46778261 L12,0" id="Path-9" stroke="#C1A1FD" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

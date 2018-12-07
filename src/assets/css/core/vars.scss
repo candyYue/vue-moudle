@@ -1,0 +1,61 @@
+// base
+$theme: #52BBFF;
+$colorBg: #F1F2F7;
+$colorText: #303133;
+$colorPlaceholder:#b4bccd;
+$fontSize:14px;
+$fontFamily: "Helvetica Neue","Helvetica","PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+$fontLineHeight:1.5;
+// $info: #90939A;
+$success:#67C139;
+$warning:#FFB21A;
+$danger:#fe4f4e;
+$textColor:#595d65;
+$border-input:#d8dce5;
+$waiting:#8E9CBB;
+
+
+// global
+$global-width: 1024px;
+$theme-color: #52BBFF;
+$primary-text-color:#303133;
+$subsidiary-text-color: #606265;
+$info-text-color: #90939A;
+$placeholder-text-color: #B4BDCE;
+$text-error:#FE4F4E;
+
+
+// header
+$header-height:54px;
+
+// sidebar
+$main-minheight: calc(100vh - 72px - 60px - 20px);
+$sidebar-width:180px;
+$sidebar-logo-bg:#2C3E50;
+$sidebar-menu-bg: #34485E;
+$sidebar-menu-height:48px;
+$sidebar-color:rgba(255, 255, 255, 0.65);
+$sidebar-active-color:#fff;
+// $sidebar-active-bg: #2A3541;
+
+
+// modal
+// $modal-content-height:calc(calc(100vh - 57px) - 140px);
+$modal-content-height:calc(100vh - 57px);
+
+
+// table
+$table-striped: #EFF9FF;
+// pagination
+$pagination-color: #606265;
+
+// input
+$input-height: 36px;
+$input-border-color: #d8dce5;
+$input-border-active-color: #c0c4cc;
+
+
+/* Break-point
+--------------------------*/
+$--md: 1024px !default;
+$--lg: 1366px !default;

@@ -1,0 +1,52 @@
+@import '../core/vars.scss';
+
+// pagination
+.el-pagination {
+   font-weight: normal;
+   padding: 24px 0 0;
+   text-align: right;
+   &.is-background .btn-prev,
+   &.is-background .btn-next,
+   &.is-background .el-pager li {
+     color: $pagination-color;
+     background: #FFFFFF;
+     border: 1px solid #D8DCE5;
+     border-radius: 3px;
+   }
+   &.is-background .el-pager li:not(.disabled).active{
+    border: 1px solid #52BBFF;
+  }
+  & .el-select .el-input{
+    width: 60px;
+    .el-input__inner{
+      height: 30px;
+      font-size: 14px;
+    }
+  }
+   .el-pagination__sizes,.el-pagination__total{
+    font-size: 14px!important;
+   }
+   .el-pagination__total{
+     color: #606266;
+     margin-right: 5px;
+   }
+   .unit{
+     font-size: 14px!important;
+     margin: 0 18px 0 -25px;
+   }
+   button{
+     height: 30px;
+     line-height: 30px;
+   }
+   .el-pager li{
+     height: 30px;
+     line-height: 30px;
+   }
+}
+.pagination-width {
+  min-width: 60px !important;
+
+  .el-select-dropdown__item {
+    padding: 0 17px;
+  }
+}

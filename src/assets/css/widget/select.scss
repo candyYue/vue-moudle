@@ -1,0 +1,81 @@
+@import '../core/vars.scss';
+
+// 修改远程搜索无下拉箭头的样式
+.el-select {
+    .el-input{
+        .el-icon-::before{
+            content: "\E605"
+        } 
+        &.is-focus{
+            .el-icon-{
+                transform: rotateZ(0deg);
+            }
+        }          
+    }
+    .el-input__suffix{
+        right: 4px;
+    }
+}
+
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover{
+    background: #EDF8FF;  
+}
+.el-select-dropdown__item.selected{
+    background: #EDF8FF;
+    color: #52BBFF;
+    font-weight: normal;
+}
+.el-cascader-menu__item.is-active{
+    background: #edf8ff;
+    color: #52bbff;
+    font-weight: normal;
+}
+.el-select-dropdown__wrap {
+    max-height: 202px;
+}
+.el-cascader-menu{
+    max-height: 182px;
+    min-width: 153px;
+}
+
+.select-width170 {
+    width: 170px!important;
+}
+.select-width138 {
+    width: 138px!important;
+}
+.select-width154 {
+    width: 154px!important;
+}
+.select-width300 {
+    width: 300px!important;
+}
+.select-width200 {
+    width: 200px!important;
+}
+.select-width176 {
+    width: 176px!important;
+}
+.cascader-width149 {
+    .el-cascader-menu {
+        min-width: 149px;
+        width: 149px!important;
+    }
+}
+.cascader-width300 {
+    .el-cascader-menu {
+        width: 300px!important;
+    }
+}
+.cascader-width173 {
+    .el-cascader-menu {
+        min-width: 173px!important;
+    }
+}
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected{
+    &.hover{
+        background-color: #EDF8FF;
+    }
+   background-color: #EDF8FF;
+}

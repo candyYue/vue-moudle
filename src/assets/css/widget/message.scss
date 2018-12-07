@@ -1,0 +1,154 @@
+@import '../core.scss';
+
+
+.modal.message-box.fade-up {
+    .modal-content,
+    .modal-mask {
+        transition: all linear .3s;
+    }
+    .modal-mask {
+        opacity: 0;
+    }
+    .modal-content {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.modal.message-box.fade-in {
+    .modal-mask {
+        animation: fade-in .35s;
+    }
+    .modal-content {
+        animation: message .35s;
+    }
+}
+
+.message-tip {
+    transition: all linear .3s;
+    &.fade-up {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+}
+
+// icon
+.modal.message-box,
+.message-tip {
+    .icon-message {
+        display: inline-block;
+        font-style: normal;
+        text-align: center;
+        &::before {
+            display: inline-block;
+            @include size(22px);
+            content: '';
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    $icons: success, info, warning, error;
+    @each $icon in $icons {
+        .icon-message-#{$icon} {
+            &::before{
+                background-image: url(../../../assets/icons/message-#{$icon}.png)
+            }
+        }
+      }
+}
+
+
+// message-box
+.modal.message-box {
+    .modal-content {
+        width: 360px;
+        // margin-top: 30vh;
+        top: 30vh;
+        line-height: 20px;
+    }
+    .modal-body {
+        display: flex;
+    }
+    .icon-message {
+        position: absolute;
+        @include center-translate(y);
+        left: 0;
+        @include round(22px);
+        margin-right: 10px;
+        &::before {
+            font-size: 20px;
+            font-weight: 500;
+            vertical-align: -2px;
+        }
+    }
+    .message-content {
+        position: relative;
+        max-width: 356px;
+        margin: 0 auto;
+        text-align: justify;
+        padding-left: 32px;
+    }
+}
+
+
+.message-tip {
+    @include center-translate();
+    position: fixed;
+    top:80px;
+    // @include text-vertical-center(44px);
+    line-height: 20px;
+    padding: 9px 30px;
+    border-radius:4px;
+    z-index: 10000;
+    animation-timing-function: ease-in-out;
+    $message-types: (success:$success, error:$danger, info: $theme-color, warning: $warning);
+    @each $message-type,
+    $message-color in $message-types {
+        &.message-#{$message-type} {
+            color: $message-color;
+            border: 1px solid mix(#fff, $message-color, 80%);
+            background-color: mix(#fff, $message-color, 90%);
+        }
+    }
+    // &.message-info {
+    //     color: $info;
+    //     background-color: #edf2fd;
+    //     border: 1px solid #e7e9ec;
+    // }
+    .icon-message {
+        &::before{
+            @include round(16px);
+            line-height: 16px;
+            margin-right: 8px;
+            vertical-align: middle;            
+        }
+    }
+}
+@keyframes message {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes message-tip {
+    0% {
+        opacity: 0;
+        transform: translate(-50%,-200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

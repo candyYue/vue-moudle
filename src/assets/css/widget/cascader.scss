@@ -1,0 +1,33 @@
+@import '../core.scss';
+.el-cascader-nodata{
+    // .el-cascader-menu{
+        @include size(178px, 40px);
+        text-align: center;
+        line-height: 40px;
+        color: #999;
+    // }
+}
+.el-cascader-menu__item:hover, .el-cascader-menu__item:focus:not(:active){
+    background: #EDF8FF;
+}
+.el-cascader-menu__item--extensible:after{
+    right:10px
+}
+.el-cascader-menu__item {
+    padding-right: 30px;
+}
+.el-button--default.button__del,
+.cascader-button__del{
+    margin-left: 12px;
+    height: 20px;
+    width: 20px;
+    padding: 0px;
+    border-radius: 50%;
+    border:none;
+    display: inline-block;
+    background: url(../../../assets/icons/button-del.png) no-repeat center/contain;
+    .el-icon-minus:before{
+        content:''
+    }
+  }
+  

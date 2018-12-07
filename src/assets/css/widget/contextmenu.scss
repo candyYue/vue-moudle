@@ -1,0 +1,31 @@
+@import '../core.scss';
+$contextmenu:'v-contextmenu';
+.#{$contextmenu} {
+  text-align: left;
+  box-shadow: 0 2px 4px 0 #A4AAB3;
+  border-radius: 4px;
+  max-height: 227px;
+  overflow-y: auto;
+  .#{$contextmenu}-item {
+    color: $subsidiary-text-color;
+    padding: 11px 30px;
+    &.#{$contextmenu}-item--hover {
+      color: $subsidiary-text-color;      
+    }
+    &:active{
+      color: $theme-color;
+    }
+    &:hover{
+      background-color: #edf8ff;
+    }
+  }
+  &--default .#{$contextmenu}-item--hover {
+      background-color: #edf8ff;
+      color: $subsidiary-text-color;      
+  }
+}
+.el-textarea__copy{
+    position: fixed;
+    left: 0;
+    top: 0;
+}

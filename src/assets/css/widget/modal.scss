@@ -1,0 +1,216 @@
+@import "@/assets/css/core.scss";
+
+.message-box{
+  .modal-mask{
+    z-index: 1000;
+  }
+}
+
+$modal: modal;
+$padding: 16px;
+
+.#{$modal}{
+  overflow: auto;
+  z-index: 999;
+  &-open{
+    @include fullscreen();
+    // display: flex;
+    // justify-content: center;
+  }
+  &-mask {
+    @include fullscreen();
+    // background-color: rgba(180, 188, 205, 0.35);
+    background-color: rgba(0,0,0,.5);
+    z-index: 999;
+  }
+  &-content{
+    position: relative;
+    // position: fixed;
+    height: fit-content;
+    margin: 0 auto 50px;
+    top: 16vh;
+    width: 468px;
+    background-color: #fff;
+    border-radius: 3px;
+    z-index: 1000;
+  }
+  &-header{
+    font-size: 16px;
+    padding: $padding - 3px $padding;
+    border-bottom:1px solid #E6E8EE;
+    &.drag {
+      cursor: move;
+      user-select: none;
+    }
+  }
+  &-close {
+    position: absolute;
+    right: $padding - 3px;
+    top: $padding;
+    line-height: 1;
+    cursor: pointer;
+    font-size: 18px;
+    color: #c0c6d4;
+    &:hover{
+        // color: mix(#fff, #c0c6d4,20%)
+        color: #999ca1;
+    }
+    &:active {
+        color: mix(#000, #c0c6d4, 8%)
+    }
+  }
+  &.modal-padding-16{
+      .#{$modal}-body {
+          padding: 24px 24px 24px 6px;
+      }
+  }
+  &.modal-padding-25{
+      .#{$modal}-body {
+          padding: 24px 33px 32px 26px;
+      }
+  }
+  &.modal-padding-35{
+      .#{$modal}-body {
+          padding: 10px 35px 24px; 
+      }
+  }
+  &.modal-padding-30{
+      .#{$modal}-body {
+          padding: 24px 52px 32px;
+      }
+  }
+  &.modal-padding-40{
+      .#{$modal}-body {
+          padding-left: 40px;
+          padding-right: 40px;
+      }
+  }
+  &.modal-padding-45{
+      .#{$modal}-body {
+          padding: 10px 45px 24px; 
+      }
+  }
+  &.modal-has-tip{
+    .#{$modal}-body {
+        padding-top: 48px;
+    }
+  }
+
+  &-body {
+    position: relative;
+    color: $subsidiary-text-color;
+    padding: 24px 26px 32px 24px; // max-height: $modal-content-height;
+    border-bottom:1px solid #E6E8EE;
+    // overflow-y: auto;
+  }
+  &-tip {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 24px;
+      line-height: 24px;
+      background: #EDF8FF;
+      font-size: 12px;
+      text-align: center;
+      color: $info-text-color;
+  }
+  &-footer {
+    text-align: right;
+    padding: $padding - 4px $padding;
+    .el-button {
+      padding: 8px 13px;
+      vertical-align: middle; // @include size(56px,32px);
+    }
+    .loading-btn {
+      @include size(56px, 32px);
+      padding: 0;
+      position: relative;
+      font-size: 0;
+      vertical-align: middle;
+      .el-loading-spinner .path {
+        stroke: #fff;
+        stroke-width: 4;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// animation
+$delay: 0.25s;
+.fade-in-enter-active,
+.fade-in-leave-active {
+  transition: opacity 0.5s $delay;
+}
+
+.fade-in-enter,
+.fade-in-leave-to {
+  opacity: 0;
+}
+
+.modal-fade-up-enter-active,
+.modal-fade-up-leave-active {
+  transition: transform 0.3s $delay, opacity 0.15s $delay;
+}
+
+.modal-fade-up-enter,
+.modal-fade-up-leave-to {
+  transform: translateY( -20%);
+  opacity: 0;
+} 
+
+// 协议弹框
+// .service-modal {
+//   .modal-header {
+//     text-align: center;
+//     padding: 40px 0 30px;
+//     margin-bottom: 0;
+//   }
+//   .modal-content {
+//     width: 600px;
+//   }
+//   .modal-body {
+//     max-height: calc(calc(100vh - 120px) - 168px);
+//     padding: 0 16px;
+//     h1 {
+//       display: none;
+//     }
+//     h2 {
+//       font-size: 16px;
+//     }
+//   }
+//   .modal-footer {
+//     text-align: center;
+//     padding: 20px 16px;
+//   }
+//   .btn-service-modal-close {
+//     width: 102px;
+//   }
+// } 
+// // 穿梭框弹框
+// .sel-number-modal {
+//   .modal-content {
+//     width: 520px;
+//   }
+//   .el-transfer__buttons {
+//     padding: 0 26px;
+//   }
+// } 
+// // 图片预览
+// .preview-modal .modal-content {
+//   width: auto;
+//   padding: 52px 28px 28px;
+//   .modal-body {
+//     padding: 0;
+//     img {
+//       max-height: $modal-content-height;
+//       max-width: calc(100vw - 80px);
+//       display: block;
+//     }
+//   }
+// }

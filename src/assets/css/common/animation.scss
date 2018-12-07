@@ -1,0 +1,49 @@
+$transition-timing-function:ease-in-out;
+$transition-duration: 0.2s;
+$transition: all $transition-timing-function $transition-duration;
+
+$animation-type-list : fade,
+fade-up;
+@each $animation in $animation-type-list {
+  .#{$animation}-enter-active,
+  .#{$animation}-leave-active {
+    transition: $transition;
+  }
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+.fade-up-enter,
+.fade-up-leave-active {
+  opacity: 0;
+  transform: translate(0, -30%);
+}
+
+ .only-fade-up-active,
+ .only-fade-up-leave-active {
+   transition: $transition;
+ }
+
+.only-fade-up-enter,
+.only-fade-up-leave-active {
+  opacity: 0;
+  transform: translate(0, -30%);
+}
+
+
+/*fade-transform*/
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all .35s;
+}
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
